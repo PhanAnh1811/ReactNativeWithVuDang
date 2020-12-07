@@ -1,8 +1,11 @@
-import React from "react";
-import {Text,View} from "react-native";
+import React from 'react';
+import MainNavigations from './src/navigations/MainNavigations';
 
-const App=()=>{
-  
+const App = () => {
+  return (
+    <MainNavigations />
+  )
+
 }
 
 export default App;
