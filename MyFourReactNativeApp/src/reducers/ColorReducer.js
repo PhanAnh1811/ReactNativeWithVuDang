@@ -5,21 +5,18 @@ const reducer = (state, action) => {
         case 'red':
             if (state.red + action.payload >= 0 && state.red + action.payload <= 255)
                 return { ...state, red: state.red + action.payload };
-            else
-                return state;
-        case 'blue':
-            if (state.blue + action.payload >= 0 && state.blue + action.payload <= 255)
-                return { ...state, blue: state.blue + action.payload };
-            else
-                return state;
+            return state;
         case 'green':
             if (state.green + action.payload >= 0 && state.green + action.payload <= 255)
                 return { ...state, green: state.green + action.payload };
-            else
-                return state;
+            return state;
+        case 'blue':
+            if (state.blue + action.payload >= 0 && state.blue + action.payload <= 255)
+                return { ...state, blue: state.blue + action.payload };
+            return state;
         default:
             return state;
     }
 }
 
-export default reducer; 
+export default reducer;
