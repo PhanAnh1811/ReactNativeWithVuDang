@@ -7,7 +7,7 @@ const UselessTextInput = () => {
     console.log(email);
     return (
         <>
-            <TextInput onChangeText={(text) => setEmail(text)} style={{borderColor:'gray',borderWidth:1}} />
+            <TextInput onChangeText={(text) => setEmail(text)} style={{ borderColor: 'gray', borderWidth: 1 }} />
             <Text>{email}</Text>
         </>
     )
