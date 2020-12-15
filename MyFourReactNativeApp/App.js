@@ -40,14 +40,13 @@ const App = () => {
   const [colors, setColors] = useState([]);
 
   return (
-    <View>
-
-      {/* <ButtonCustom name="Increase" func={() => setCounter(counter + 1)} />
+    <View style={styles.container}>
+      {/* <View>
+      <ButtonCustom name="Increase" func={() => setCounter(counter + 1)} />
       <ButtonCustom name="Decrease" func={() => setCounter(counter - 1)} />
       <Text>Current count:{counter}</Text>
 
       <ButtonCustom name="ADD A COLOR" func={() => setColors([...colors, RandomRgb()])} />
-      <View>
         <FlatList
           data={colors}
           keyExtractor={i => i}
@@ -59,8 +58,8 @@ const App = () => {
         />
       </View> */}
 
-      <View>
-        {/* <Text>Red</Text>
+      {/* <View>
+        <Text>Red</Text>
         <ButtonCustom name="More Red" func={() => dispatch({ type: 'red', payload: COLOR_VALUE })} />
         <ButtonCustom name="Less Red" func={() => dispatch({ type: 'red', payload: COLOR_VALUE * -1 })} />
 
@@ -72,15 +71,18 @@ const App = () => {
         <ButtonCustom name="More Blue" func={() => dispatch({ type: 'blue', payload: COLOR_VALUE })} />
         <ButtonCustom name="Less Blue" func={() => dispatch({ type: 'blue', payload: COLOR_VALUE * -1 })} />
 
-        <View style={{ width: 150, height: 150, backgroundColor: `rgb(${red},${green},${blue})` }}></View> */}
+        <View style={{ width: 150, height: 150, backgroundColor: `rgb(${red},${green},${blue})` }}></View>
 
         <Text>Refactor Counter Project by Reducers</Text>
         <ButtonCustom name="Increase" func={() => dispatch({ type: 'increase', payload: COUNTER_VALUE })} />
         <ButtonCustom name="Decrease" func={() => dispatch({ type: 'decrease', payload: COUNTER_VALUE * -1 })} />
         <Text style={styles.text}>Current count:{counter}</Text>
-      </View>
-      <EmailScreen />
-      <PasswordScreen />
+        <EmailScreen />
+        <PasswordScreen />
+      </View> */}
+      <View style={styles.viewOnestyle}/>
+      <View style={styles.viewTwoStyle}/>
+      <View style={styles.viewThreeStyle}/>
     </View>
   )
 }
@@ -91,7 +93,33 @@ const styles = StyleSheet.create({
     color: 'red',
     fontWeight: 'bold',
     fontSize: 20
-  }
+  },
+
+  container:{
+    height:200,
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'flex-start',
+  },
+
+  viewOnestyle:{
+    backgroundColor:'red',
+    width:100,
+    height:100
+  },
+  viewTwoStyle:{
+    backgroundColor:'green',
+    width:100,
+    height:100,
+   alignSelf:'flex-end'
+  },
+
+  viewThreeStyle:{
+    justifyContent:'flex-end',
+    backgroundColor:'blue',
+    width:100,
+    height:100
+  },
 })
 
 export default App;
