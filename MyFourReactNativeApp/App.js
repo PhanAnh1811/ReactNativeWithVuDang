@@ -40,7 +40,7 @@ const App = () => {
   const [colors, setColors] = useState([]);
 
   return (
-    <View style={styles.container}>
+    <View >
       {/* <View>
       <ButtonCustom name="Increase" func={() => setCounter(counter + 1)} />
       <ButtonCustom name="Decrease" func={() => setCounter(counter - 1)} />
@@ -58,8 +58,8 @@ const App = () => {
         />
       </View> */}
 
-      {/* <View>
-        <Text>Red</Text>
+      <View>
+        {/* <Text>Red</Text>
         <ButtonCustom name="More Red" func={() => dispatch({ type: 'red', payload: COLOR_VALUE })} />
         <ButtonCustom name="Less Red" func={() => dispatch({ type: 'red', payload: COLOR_VALUE * -1 })} />
 
@@ -71,7 +71,7 @@ const App = () => {
         <ButtonCustom name="More Blue" func={() => dispatch({ type: 'blue', payload: COLOR_VALUE })} />
         <ButtonCustom name="Less Blue" func={() => dispatch({ type: 'blue', payload: COLOR_VALUE * -1 })} />
 
-        <View style={{ width: 150, height: 150, backgroundColor: `rgb(${red},${green},${blue})` }}></View>
+        <View style={{ width: 150, height: 150, backgroundColor: `rgb(${red},${green},${blue})` }}></View> */}
 
         <Text>Refactor Counter Project by Reducers</Text>
         <ButtonCustom name="Increase" func={() => dispatch({ type: 'increase', payload: COUNTER_VALUE })} />
@@ -79,10 +79,10 @@ const App = () => {
         <Text style={styles.text}>Current count:{counter}</Text>
         <EmailScreen />
         <PasswordScreen />
-      </View> */}
-      <View style={styles.viewOnestyle}/>
+      </View>
+      {/* <View style={styles.viewOnestyle}/>
       <View style={styles.viewTwoStyle}/>
-      <View style={styles.viewThreeStyle}/>
+      <View style={styles.viewThreeStyle}/> */}
     </View>
   )
 }
